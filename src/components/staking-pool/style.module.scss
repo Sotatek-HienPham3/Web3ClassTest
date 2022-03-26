@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 50px 150px;
+  background-color: #3f3f3f;
+  color: #fff;
+  min-height: 100vh;
+  & > div {
+    font-size: 18px;
+  }
+
+  .row{
+      margin-top: 1rem;
+  }
+
+  button{
+      border-radius: 8px;
+      padding: 10px 20px;
+  }
+
+}
+
+.input{
+  padding: 10px !important;
+  border-radius: 10px !important;
+  font-size: 18px !important;
+}

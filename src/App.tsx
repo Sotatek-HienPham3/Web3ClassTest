@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { useWeb3React } from '@web3-react/core';
+import './App.css';
+import DefaultLayout from './components/layouts';
+import StakingPool from './components/staking-pool';
+import 'antd/dist/antd.css';
+
+const App = () =>{
+  const { account } = useWeb3React();
+  console.log(account);
+  
+  return <DefaultLayout>
+   {account ? <StakingPool/> : null} 
+  </DefaultLayout>
 }
 
 export default App;
